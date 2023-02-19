@@ -3,6 +3,7 @@ package com.hetongxue;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Menu启动类
@@ -10,7 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author 何同学
  */
 @SpringBootApplication
-@MapperScan("com.hetongxue.mapper")
+@EnableTransactionManagement
+@MapperScan("com.hetongxue.repository")
 public class MenuApplication {
 
     public static void main(String[] args) {
